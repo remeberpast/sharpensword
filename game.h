@@ -1,19 +1,21 @@
 #pragma once
-#define ROW 10
-#define COL 10
 
+#define ROW 9       //用作存放雷
+#define COL 9
+#define ROWS ROW+2      //用作存放扫雷的信息
+#define COLS COL+2
+#define easy_count 10
+
+
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h> //在这里引用头文件之后，在其他文件中引用game.h后就不用引用其他头文件了
-//函数声明
 
 //初始化棋盘
-void InitBoard(char board[ROW][COL], int row, int col);
-//打印棋盘的函数
-void DisplayBoard(char board[ROW][COL], int row, int col);
-//玩家下棋
-void PlayerMove(char board[ROW][COL], int row, int col);
-//电脑下棋
-void CommputerMove(char board[ROW][COL], int row, int col);
-//判断输赢
-char IsWin(char board[ROW][COL], int row, int col);
+void InitBoard(char board[ROWS][COLS], int rows, int cols, char set);
+//打印棋盘
+void DisplayBoard(char board[ROWS][COLS], int row, int col);
+//布置雷
+void SetMine(char mine[ROWS][COLS], int row, int col);
+//排查雷
+void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col);
