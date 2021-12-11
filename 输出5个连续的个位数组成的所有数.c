@@ -4,15 +4,15 @@ int main(void)
 {
 	int a = 0;
 	scanf("%d", &a);
-	for (int i = 1;i <= a + 4;i++)
+	for (int i = a;i <= a + 4;i++)
 	{
-		for (int j = 1;j <= a + 4;j++)
+		for (int j = a;j <= a + 4;j++)
 		{
-			for (int k = 1;k <= a + 4;k++)
+			for (int k = a;k <= a + 4;k++)
 			{
-				for (int l = 1;l <= a + 4;l++)
+				for (int l = a;l <= a + 4;l++)
 				{
-					for (int m = 1;m <= a + 4;m++)
+					for (int m = a;m <= a + 4;m++)
 					{
 						if (i != j && i != k && i != l && i != m)
 						{
