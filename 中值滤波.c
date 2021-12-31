@@ -1,19 +1,29 @@
 //#define _CRT_SECURE_NO_WARNINGS 1
 //#include <stdio.h>
-////void find_middle(int arr0[], int w)
+//void find_middle(int arr0[], int w)
+//{
+//	for (int a = 0;a < w - 1;a++)
+//	{
+//		for (int b = 0;b < w - 1 - a;b++)
+//		{
+//			if (arr0[b] < arr0[b + 1])
+//			{
+//				int tmp = arr0[b];
+//				arr0[b] = arr0[b + 1];
+//				arr0[b + 1] = tmp;
+//			}
+//		}
+//	}
+//}
+////int main()
 ////{
-////	for (int a = 0;a < w - 1;a++)
+////	int arr[10] = { 1,3,12,5,9,7,2,10,32,8 };
+////	find_middle(arr, 10);
+////	for (int i = 0;i < 10;i++)
 ////	{
-////		for (int b = 0;b < w - 1 - a;b++)
-////		{
-////			if (arr0[b] < arr0[b + 1])
-////			{
-////				int tmp = arr0[b];
-////				arr0[b] = arr0[b + 1];
-////				arr0[b + 1] = tmp;
-////			}
-////		}
+////		printf("%d ", arr[i]);
 ////	}
+////	return 0;
 ////}
 //int main(void)
 //{
@@ -42,7 +52,7 @@
 //				arr0[j] = arr[j + i];
 //			}
 //			//将arr0排序
-//			for (int a = 0;a < w - 1;a++)
+//			/*for (int a = 0;a < w - 1;a++)
 //			{
 //				for (int b = 0;b < w - 1 - a;b++)
 //				{
@@ -53,7 +63,8 @@
 //						arr0[b + 1] = tmp;
 //					}
 //				}
-//			}
+//			}*/
+//			find_middle(arr0, w);
 //			brr[i] = arr0[w / 2];
 //		}
 //		//替换
@@ -70,7 +81,33 @@
 //	}
 //	return 0;
 //}
-
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<string.h>
+//#include<math.h>
+//int N[250] = { 0 };
+//int my_atoi(const char* str)
+//{
+//	int num = 0;
+//	int len = strlen(str);
+//	for (int i = 0;i < len;i++)
+//	{
+//		if (str[i] >= 48 && str[i] <= 57)
+//			N[len - i - 1] = str[i] - '0';
+//		else
+//			return 0;
+//	}
+//	for (int j = len - 1;j >= 0;j--)
+//	{
+//		num += (int)(N[j] * pow(10, j));
+//	}
+//	return num;
+//}
+//int main()
+//{
+//	printf("%d\n", my_atoi("abcd"));//48~57
+//	return 0;
+//}
 
 //#include<stdio.h>
 //int sort(int arr[], int start, int sz)//对滤波窗口内的数进行排序

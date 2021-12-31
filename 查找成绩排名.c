@@ -1,6 +1,7 @@
 //#define _CRT_SECURE_NO_WARNINGS 1
 //#include <stdio.h>
 //#include <string.h>
+//#include <stdlib.h>
 //int my_strcmp(char to_find[18], char ini_num[10])
 //{
 //	int count = 0;
@@ -25,8 +26,8 @@
 //	struct stu
 //	{
 //		char name[20];
-//		char ini_num[18];
-//		char grade[3];
+//		char ini_num[20];
+//		char grade[5];
 //	};
 //	int n = 0;
 //	char to_find[18];
@@ -39,15 +40,19 @@
 //	//排序
 //	//将成绩存进新的数组里
 //	int grade_[100] = { 0 };
+//	for (int i = 0;i < n;i++)
 //	{
-//		for (int i = 0;i < n;i++)
-//		{
-//			if (arr[i].grade != 'n/a')
-//			{
-//				grade_[i] = (int)arr[i].grade;
-//			}
-//		}
+//		grade_[i] = atoi(arr[i].grade);
 //	}
+//	/*struct stu* grade_[100];
+//	for (int i = 0;i < n;i++)
+//	{
+//		if (strcmp(arr[i].grade, "n/a") != 0)
+//		{
+//			grade_[i] = arr[i].grade;
+//		}
+//	}*/
+//
 //	//有成绩的进行排序
 //	for (int i = 0;i < n - 1;i++)
 //	{
@@ -72,16 +77,48 @@
 //	}
 //	if (tmp != -1)
 //	{
-//		if (arr[tmp].grade == 'n/a')
+//		if (strcmp(arr[tmp].grade, "n/a") == 0)
 //		{
 //			printf("%s %s %s %s\n", arr[tmp].name, arr[tmp].ini_num, arr[tmp].grade, arr[tmp].grade);
+//			printf("%s\n", arr[tmp].ini_num);
 //		}
 //		else
 //		{
-//			int rank = 1;
+//			//找到那个人的排名
+//			/*int rank = 1;
 //			for (int j = 0;j < n;j++)
 //			{
 //				if (grade_[j] > ((int)arr[tmp].grade))
+//				{
+//					rank++;
+//				}
+//			}*/
+//			/*int rank = 1;
+//			for (int i = 0;i < n;i++)
+//			{
+//				if (strlen(grade_[i]) > strlen(arr[tmp].grade))
+//				{
+//					rank++;
+//				}
+//				else if (strlen(grade_[i]) == strlen(arr[tmp].grade))
+//				{
+//					if ((grade_[i]).grade[0] > arr[tmp].grade[0])
+//					{
+//						rank++;
+//					}
+//					else if ((grade_[i]).grade[0] == arr[tmp].grade[0])
+//					{
+//						if ((grade_[i]).grade[0] > arr[tmp].grade[1])
+//						{
+//							rank++;
+//						}
+//					}
+//				}
+//			}*/
+//			int rank = 1;
+//			for (int a = 0;a < n;a++)
+//			{
+//				if (grade_[a] > atoi(arr[tmp].grade))
 //				{
 //					rank++;
 //				}
@@ -101,16 +138,48 @@
 //		}
 //		if (tmp != -1)
 //		{
-//			if (arr[tmp].grade == 'n/a')
+//			if (strcmp(arr[tmp].grade, "n/a") == 0)
 //			{
 //				printf("%s %s %s %s\n", arr[tmp].name, arr[tmp].ini_num, arr[tmp].grade, arr[tmp].grade);
 //			}
 //			else
 //			{
-//				int rank = 1;
+//				/*int rank = 1;
 //				for (int j = 0;j < n;j++)
 //				{
 //					if (grade_[j] > ((int)arr[tmp].grade))
+//					{
+//						rank++;
+//					}
+//				}
+//				printf("%s %s %s %d\n", arr[tmp].name, arr[tmp].ini_num, arr[tmp].grade, rank);*/
+//				/*int rank = 1;
+//				for (int i = 0;i < n;i++)
+//				{
+//					if (strlen(grade_[i]) > strlen(arr[tmp].grade))
+//					{
+//						rank++;
+//					}
+//					else if (strlen(grade_[i]) == strlen(arr[tmp].grade))
+//					{
+//						if ((*grade_[i]).grade[0] > arr[tmp].grade[0])
+//						{
+//							rank++;
+//						}
+//						else if ((*grade_[i]).grade[0] == arr[tmp].grade[0])
+//						{
+//							if ((*grade_[i]).grade[0] > arr[tmp].grade[1])
+//							{
+//								rank++;
+//							}
+//						}
+//					}
+//				}*/
+//				//找到排名
+//				int rank = 1;
+//				for (int a = 0;a < n;a++)
+//				{
+//					if (grade_[a] > atoi(arr[tmp].grade))
 //					{
 //						rank++;
 //					}
@@ -121,6 +190,8 @@
 //	}
 //	return 0;
 //}
+
+
 
 //郑浩版
 //#include<stdio.h>
