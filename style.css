@@ -1,0 +1,55 @@
+body{
+	padding: 0;/*内边距设置为0*/
+	margin: 0;/*外边距设置为0*/
+	font-family:"微软雅黑";
+}
+
+#container{
+	width: 900px;/*container宽度设置为900px*/
+	margin: 20px auto;/*外边距20px，左右自动*/
+}
+
+a{
+	text-decoration: none;/*去掉超链接下的下划线*/
+	color: #000000;
+}
+
+#main{
+	font-size: 18px;
+}
+
+#main img{
+	float: left;/*左浮动*/
+	border: #FFF 1px solid;/*设置边框为白色，1px，实线*/
+	margin: 0 10px 10px 0;/*外边距上0右10下10左0*/
+}
+
+#main img:hover{
+	border: #F00 1px solid;
+}
+
+#main p{
+	line-height: 30px;
+	text-indent: 2em;
+}
+
+#main span{
+	font-size: 12px;
+	background-color: #63B4E1;
+	margin-left: 3px;
+	padding: 5px;
+	border: #1402FF 1px solid;
+	border-radius: 5px;
+}
+
+#main span:hover{
+	color: #FFF;
+	background-color: #EFAAAC;
+	border: #F00 1px solid;
+}
+
+ul li{
+	font-size: 12px;
+	line-height: 20px;
+	border-bottom: #949494 1px dashed;
+}
