@@ -1,55 +1,48 @@
-body{
-	padding: 0;/*内边距设置为0*/
-	margin: 0;/*外边距设置为0*/
-	font-family:"微软雅黑";
+@charset "utf-8";
+.container {
+    padding: 0;
+    margin: 20px auto;
+    width: 900px;
+    zoom: 1;
+    overflow: auto;
 }
 
-#container{
-	width: 900px;/*container宽度设置为900px*/
-	margin: 20px auto;/*外边距20px，左右自动*/
+.container .TClouds {
+    border: 5px solid #dedede;
+    padding: 15px 10px;
+    width: 270px;
+    background-color:#FFFFFF;
+    float: left;
 }
 
-a{
-	text-decoration: none;/*去掉超链接下的下划线*/
-	color: #000000;
+.TClouds h3 {
+    color: #000000;
+    font-size: 24px;
+    line-height:20px;
+    border-bottom: 1px solid #999999;
+    padding:5px 0;
+    width:150px;
+    margin: 20px 10px;
 }
 
-#main{
-	font-size: 18px;
+.TClouds p span a {
+    width: 170px;
+    color: #000000;
+    text-decoration: none;
 }
 
-#main img{
-	float: left;/*左浮动*/
-	border: #FFF 1px solid;/*设置边框为白色，1px，实线*/
-	margin: 0 10px 10px 0;/*外边距上0右10下10左0*/
+.TClouds p span a:hover {
+    color: #FF0000;
 }
 
-#main img:hover{
-	border: #F00 1px solid;
+.TClouds p span {
+    border: 1px solid #dedede;
+    border-radius: 15px 15px 15px 15px;
+    margin: 10px 10px;
+    font-size: 14px;
+    padding:2px 5px;
 }
 
-#main p{
-	line-height: 30px;
-	text-indent: 2em;
-}
-
-#main span{
-	font-size: 12px;
-	background-color: #63B4E1;
-	margin-left: 3px;
-	padding: 5px;
-	border: #1402FF 1px solid;
-	border-radius: 5px;
-}
-
-#main span:hover{
-	color: #FFF;
-	background-color: #EFAAAC;
-	border: #F00 1px solid;
-}
-
-ul li{
-	font-size: 12px;
-	line-height: 20px;
-	border-bottom: #949494 1px dashed;
+.TClouds p span:hover {
+    background-color: aqua;
 }
