@@ -1,48 +1,77 @@
 @charset "utf-8";
-.container {
+/*全局样式设计*/
+* {
     padding: 0;
+    margin: 0;
+}
+
+/*设置页面主容器的样式*/
+.container {
+    width: 876px;
     margin: 20px auto;
-    width: 900px;
-    zoom: 1;
-    overflow: auto;
+    zoom: 1; /*与zoom: 1组合使用，目的是让他自动适应内部元素的高度*/
+    overflow: auto; /*与overflow: auto组合使用，目的是让他自动适应内部元素的高度*/
 }
 
-.container .TClouds {
-    border: 5px solid #dedede;
-    padding: 15px 10px;
-    width: 270px;
-    background-color:#FFFFFF;
-    float: left;
+/*新闻边框样式、宽度、外边距、圆角等*/
+.news {
+    border: 1px solid #6d5fcc;
+    width: 280px;
+    float: left; /*父元素要设置“zoom: 1，overflow: auto”，目的是父元素自动适应内部元素的高度*/
+    margin: 5px;
+    border-radius: 10px; /*圆角值都是10px，顺序：左上、右上、右下、左下*/
 }
 
-.TClouds h3 {
-    color: #000000;
-    font-size: 24px;
-    line-height:20px;
-    border-bottom: 1px solid #999999;
-    padding:5px 0;
-    width:150px;
-    margin: 20px 10px;
+/*新闻标题栏的设置*/
+.news h3 {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 20px;
+    height: 20px;
+    border: 1px solid #6d5fcc;
+    background-color: #6d5fcc;
+    padding: 5px 10px;
+    border-radius: 10px 10px 0 0; /*设置圆角，顺序：左上、右上、右下、左下*/
 }
 
-.TClouds p span a {
+/*新闻列表区内间隙、字体尺寸的设置*/
+.news ul {
+    padding: 10px;
+    font-size: 12px;
+}
+
+/*新闻列表项的设置*/
+.news ul li {
+    padding-left: 22px;
+    background: url("../image/icon.gif") 0 no-repeat; /*加载背景图片*/
+    height: 22px;
+    line-height: 22px;
+    list-style: none;
+    border-bottom: 1px dashed #6d5fcc;
+}
+
+/*新闻列表超链接样式设置，查出宽度用……替代*/
+.news ul li a {
+    display: inline-block;
     width: 170px;
     color: #000000;
     text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
-.TClouds p span a:hover {
+/*新闻列表例时间右飘*/
+.news ul li span {
+    float: right;
+}
+
+/*鼠标悬浮时超链接设置*/
+.news ul li a:hover {
     color: #FF0000;
 }
 
-.TClouds p span {
-    border: 1px solid #dedede;
-    border-radius: 15px 15px 15px 15px;
-    margin: 10px 10px;
-    font-size: 14px;
-    padding:2px 5px;
-}
-
-.TClouds p span:hover {
-    background-color: aqua;
+/*鼠标悬浮时span背景显示*/
+.news ul li:hover {
+    background-color: #CCCCCC;
 }
